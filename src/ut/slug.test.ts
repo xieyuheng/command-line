@@ -1,13 +1,14 @@
-import * as ut from "./index"
+import { assertEquals } from "./assertions"
+import { slug } from "./slug"
 
 const target = "構造-the-constructivization-of-mathematics"
 
 // prettier-ignore
 {
-  ut.assertEquals(target, ut.slug("構造 / The constructivization of mathematics"))
-  ut.assertEquals(target, ut.slug("[構造] / The constructivization of mathematics---"))
-  ut.assertEquals(target, ut.slug("---[構造] / The constructivization of mathematics---"))
-  ut.assertEquals(target, ut.slug("---「構造」 / The constructivization of mathematics---"))
-  ut.assertEquals(target, ut.slug("---「構造」 / The constructivization of mathematics___"))
-  ut.assertEquals(target, ut.slug("---「構造」 / The_constructivization_of_mathematics___"))
+  assertEquals(target, slug("構造 / The constructivization of mathematics"))
+  assertEquals(target, slug("[構造] / The constructivization of mathematics---"))
+  assertEquals(target, slug("---[構造] / The constructivization of mathematics---"))
+  assertEquals(target, slug("---「構造」 / The constructivization of mathematics---"))
+  assertEquals(target, slug("---「構造」 / The constructivization of mathematics___"))
+  assertEquals(target, slug("---「構造」 / The_constructivization_of_mathematics___"))
 }

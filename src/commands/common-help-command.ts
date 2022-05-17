@@ -1,7 +1,8 @@
 import ty from "@xieyuheng/ty"
 import { Command } from "../command"
 import { CommandRunner } from "../command-runner"
-import * as ut from "../ut"
+import { indent } from "../ut/indent"
+import { rightPad } from "../ut/right-pad"
 
 type Args = { name?: string }
 
@@ -37,7 +38,7 @@ export class CommonHelpCommand extends Command<Args> {
         [
           //
           yellow(`Help:`),
-          ut.indent(this.help(runner), "  "),
+          indent(this.help(runner), "  "),
         ].join("\n")
       )
     }
@@ -82,7 +83,7 @@ export class CommonHelpCommand extends Command<Args> {
         [
           //
           yellow(`Options:`),
-          ut.indent(options, "  "),
+          indent(options, "  "),
           ``,
         ].join("\n")
       )
@@ -93,7 +94,7 @@ export class CommonHelpCommand extends Command<Args> {
         [
           //
           yellow(`Help:`),
-          ut.indent(command.help(runner), "  "),
+          indent(command.help(runner), "  "),
         ].join("\n")
       )
     }
@@ -143,7 +144,7 @@ export class CommonHelpCommand extends Command<Args> {
       console.log(
         [
           //
-          `  ${blue(ut.rightPad(head, size))}  ${command.description}`,
+          `  ${blue(rightPad(head, size))}  ${command.description}`,
         ].join("\n")
       )
     }
