@@ -5,7 +5,7 @@ Tools for building command-line interface.
 ## Install
 
 ```
-npm i -g @xieyuheng/command-line
+npm install @xieyuheng/command-line
 ```
 
 ## Development
