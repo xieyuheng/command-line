@@ -1,20 +1,11 @@
-# Enchanter
+# Command-line
 
-> [Enchanter (live) - Dragon Age Inquisition (Elizaveta)](https://www.youtube.com/watch?v=i1IC4ymq8Uk&ab_channel=elizavetamusic)
-
-Enchanter is web (and console) application framework with powerful spells! 🪄
-
-> Clarity is the key.
->
-> Study your spells, strive for clarity. <br>
-> For clarity is the key towards powerful magic.
->
-> -- Anonymous Archimage
+Tools for building command-line interface.
 
 ## Install
 
 ```
-npm i -g @enchanterjs/enchanter
+npm i -g @xieyuheng/command-line
 ```
 
 ## Development
