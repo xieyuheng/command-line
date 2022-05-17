@@ -9,7 +9,10 @@
   "scripts": {
     "build": "tsc",
     "watch": "tsc --watch",
-    "format": "prettier src --write"
+    "format": "prettier src --write",
+    "test:js": "test-runner test node 'lib/**/*.test.js'",
+    "test:snapshot": "test-runner snapshot node 'lib/**/*.snapshot.js' --extern snapshot",
+    "test": "npm-run-all test:*"
   },
   "prettier": {
     "semi": false,
@@ -18,6 +21,8 @@
   "devDependencies": {
     "@types/node": "^17.0.34",
     "@types/yargs-parser": "^21.0.0",
+    "@xieyuheng/test-runner": "^0.2.5",
+    "npm-run-all": "^4.1.5",
     "prettier": "^2.6.2",
     "typescript": "^4.6.4"
   },
