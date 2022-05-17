@@ -1,21 +1,14 @@
 {
-  "name": "@enchanterjs/enchanter",
-  "version": "0.1.41",
-  "repository": "github:enchanterjs/enchanter",
+  "name": "@xieyuheng/command-line",
+  "version": "0.0.1",
+  "repository": "github:xieyuheng/command-line",
   "files": [
     "lib"
   ],
-  "bin": {
-    "enchanter": "bin/enchanter.js"
-  },
   "scripts": {
     "build": "tsc",
     "watch": "tsc --watch",
-    "format": "prettier src --write",
-    "test:js": "./bin/enchanter.js test node 'lib/**/*.test.js'",
-    "test:snapshot": "./bin/enchanter.js snapshot node 'lib/**/*.snapshot.js' --extern snapshot",
-    "test:snapshot-error": "./bin/enchanter.js snapshot-error node 'lib/**/*.error.js' --extern snapshot",
-    "test": "npm-run-all test:*"
+    "format": "prettier src --write"
   },
   "prettier": {
     "semi": false,
