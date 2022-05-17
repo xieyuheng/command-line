@@ -4,13 +4,6 @@ import yargsParser from "yargs-parser"
 import { Command } from "../command"
 import { CommandRunner } from "../command-runner"
 
-export function createCommandRunner(opts: {
-  commands: Array<Command<any, any>>
-  defaultCommand?: Command<any, any>
-}): CommonCommandRunner {
-  return new CommonCommandRunner(opts)
-}
-
 export class CommonCommandRunner extends CommandRunner {
   commands: Array<Command<any, any>>
   defaultCommand?: Command<any, any>

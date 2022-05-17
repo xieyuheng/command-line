@@ -1,3 +1,2 @@
 - improve API
-- export through `index.ts`
 - improve functions about printing `common-help-command`
