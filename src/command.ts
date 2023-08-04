@@ -7,7 +7,7 @@ type SchemaObject<T> = { [P in keyof T]: Schema<T[P]> }
 
 export abstract class Command<
   Args extends Object = {},
-  Opts extends Object = {}
+  Opts extends Object = {},
 > {
   abstract name: string
   abstract description: string
@@ -29,7 +29,7 @@ export abstract class Command<
         [
           `I expect the given path to refer to a file, but it does not exist.`,
           `  path: ${path}`,
-        ].join("\n")
+        ].join("\n"),
       )
       process.exit(1)
     }
@@ -39,7 +39,7 @@ export abstract class Command<
         [
           `I expect the given path to refer to a file, but it refers to something else.`,
           `  path: ${path}`,
-        ].join("\n")
+        ].join("\n"),
       )
       process.exit(1)
     }
@@ -51,7 +51,7 @@ export abstract class Command<
         [
           `I expect the given path to exist, but it does not exist.`,
           `  path: ${path}`,
-        ].join("\n")
+        ].join("\n"),
       )
       process.exit(1)
     }

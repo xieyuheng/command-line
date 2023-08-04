@@ -45,7 +45,7 @@ export class CommonCommandRunner extends CommandRunner {
         [
           `I was given a command name that I do not know how to handle.`,
           `  name: ${name}`,
-        ].join("\n")
+        ].join("\n"),
       )
       process.exit(1)
     }
@@ -54,7 +54,7 @@ export class CommonCommandRunner extends CommandRunner {
   async apply(
     command: Command<any, any>,
     array: Array<any>,
-    record: Record<string, any>
+    record: Record<string, any>,
   ): Promise<void> {
     const args = this.pruneArgs(command.args, array)
     const opts = this.pruneOpts(command.opts, record)
@@ -63,7 +63,7 @@ export class CommonCommandRunner extends CommandRunner {
 
   private pruneOpts(
     schemas: Record<string, Schema<any>>,
-    record: Record<string, any>
+    record: Record<string, any>,
   ): any {
     const opts: any = {}
     for (const [key, schema] of Object.entries(schemas)) {
@@ -77,7 +77,7 @@ export class CommonCommandRunner extends CommandRunner {
               `  key: ${key}`,
               `  give: ${record[key]}`,
               `  expect: ${JSON.stringify(schema.json())}`,
-            ].join("\n")
+            ].join("\n"),
           )
           process.exit(1)
           return
@@ -92,7 +92,7 @@ export class CommonCommandRunner extends CommandRunner {
 
   private pruneArgs(
     schemas: Record<string, Schema<any>>,
-    array: Array<any>
+    array: Array<any>,
   ): any {
     let i = 0
 
@@ -110,7 +110,7 @@ export class CommonCommandRunner extends CommandRunner {
               `  index: ${i}`,
               `  give: ${array[i]}`,
               `  expect: ${JSON.stringify(schema.json())}`,
-            ].join("\n")
+            ].join("\n"),
           )
           process.exit(1)
           return

@@ -39,7 +39,7 @@ export class CommonHelpCommand extends Command<Args> {
           //
           yellow(`Help:`),
           indent(this.help(runner), "  "),
-        ].join("\n")
+        ].join("\n"),
       )
     }
   }
@@ -62,7 +62,7 @@ export class CommonHelpCommand extends Command<Args> {
         yellow(`Description:`),
         `  ${command.description}`,
         ``,
-      ].join("\n")
+      ].join("\n"),
     )
 
     console.log(
@@ -71,7 +71,7 @@ export class CommonHelpCommand extends Command<Args> {
         yellow(`Usage:`),
         `  ${blue(`${name} ${this.signature(command)}`)}`,
         ``,
-      ].join("\n")
+      ].join("\n"),
     )
 
     if (Object.entries(command.opts).length > 0) {
@@ -85,7 +85,7 @@ export class CommonHelpCommand extends Command<Args> {
           yellow(`Options:`),
           indent(options, "  "),
           ``,
-        ].join("\n")
+        ].join("\n"),
       )
     }
 
@@ -95,7 +95,7 @@ export class CommonHelpCommand extends Command<Args> {
           //
           yellow(`Help:`),
           indent(command.help(runner), "  "),
-        ].join("\n")
+        ].join("\n"),
       )
     }
   }
@@ -109,7 +109,7 @@ export class CommonHelpCommand extends Command<Args> {
         yellow(`Usage:`),
         `  command [arguments] [options]`,
         ``,
-      ].join("\n")
+      ].join("\n"),
     )
   }
 
@@ -124,7 +124,7 @@ export class CommonHelpCommand extends Command<Args> {
           yellow(`Default command:`),
           `  ${blue(this.signature(command))}  ${command.description}`,
           ``,
-        ].join("\n")
+        ].join("\n"),
       )
     }
   }
@@ -134,8 +134,8 @@ export class CommonHelpCommand extends Command<Args> {
 
     const size = Math.max(
       ...runner.commands.map(
-        (command) => `${command.name} ${this.signature(command)}`.length
-      )
+        (command) => `${command.name} ${this.signature(command)}`.length,
+      ),
     )
 
     console.log(yellow(`Commands:`))
@@ -145,7 +145,7 @@ export class CommonHelpCommand extends Command<Args> {
         [
           //
           `  ${blue(rightPad(head, size))}  ${command.description}`,
-        ].join("\n")
+        ].join("\n"),
       )
     }
   }
