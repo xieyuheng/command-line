@@ -1,1 +1,1 @@
-export * from "./common-help-command"
+export * from "./CommonHelp"

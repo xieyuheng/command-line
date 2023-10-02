@@ -1,12 +1,12 @@
 import ty from "@xieyuheng/ty"
 import { Command } from "../command"
 import { CommandRunner } from "../command-runner"
-import { indent } from "../ut/indent"
-import { rightPad } from "../ut/right-pad"
+import { indent } from "../utils/indent"
+import { rightPad } from "../utils/rightPad"
 
 type Args = { name?: string }
 
-export class CommonHelpCommand extends Command<Args> {
+export class CommonHelp extends Command<Args> {
   name = "help"
 
   description = "Display help for a command"

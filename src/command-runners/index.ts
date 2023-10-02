@@ -1,1 +1,1 @@
-export * from "./common-command-runner"
+export * from "./CommonCommandRunner"
