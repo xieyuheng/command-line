@@ -1,4 +1,4 @@
-import { Errors, Schema } from "@xieyuheng/ty"
+import { Schema, isReport } from "@xieyuheng/ty"
 import Path from "path"
 import yargsParser from "yargs-parser"
 import { Command } from "../command"
@@ -70,13 +70,14 @@ export class CommonCommandRunner extends CommandRunner {
       try {
         opts[key] = schema.prune(record[key])
       } catch (error) {
-        if (error instanceof Errors.InvalidData) {
+        if (isReport(error)) {
           console.error(
             [
-              `I found invalid input in options.`,
+              `[CommonCommandRunner] I found invalid input in options.`,
               `  key: ${key}`,
               `  give: ${record[key]}`,
-              `  expect: ${JSON.stringify(schema.json())}`,
+              ``,
+              error.message,
             ].join("\n"),
           )
           process.exit(1)
@@ -102,14 +103,16 @@ export class CommonCommandRunner extends CommandRunner {
         args[key] = schema.prune(array[i])
         i++
       } catch (error) {
-        if (error instanceof Errors.InvalidData) {
+        if (isReport(error)) {
           console.error(
             [
-              `I found invalid input in positional args.`,
+              `[CommonCommandRunner] I found invalid input in positional args.`,
+              ``,
               `  name: ${key}`,
               `  index: ${i}`,
               `  give: ${array[i]}`,
-              `  expect: ${JSON.stringify(schema.json())}`,
+              ``,
+              error.message,
             ].join("\n"),
           )
           process.exit(1)

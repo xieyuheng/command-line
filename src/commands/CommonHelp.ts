@@ -1,4 +1,4 @@
-import ty from "@xieyuheng/ty"
+import { ty } from "@xieyuheng/ty"
 import { Command } from "../command"
 import { CommandRunner } from "../command-runner"
 import { indent } from "../utils/indent"
