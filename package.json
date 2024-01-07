@@ -1,9 +1,11 @@
 {
   "name": "@xieyuheng/command-line",
   "version": "0.0.13",
+  "type": "module",
   "repository": "github:xieyuheng/command-line",
   "main": "lib/index.js",
   "files": [
+    "src",
     "lib"
   ],
   "scripts": {
