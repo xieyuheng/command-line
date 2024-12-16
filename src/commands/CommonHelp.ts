@@ -1,4 +1,4 @@
-import { ty } from "@xieyuheng/ty"
+import ty from "@xieyuheng/ty"
 import { CommandRunner } from "../command-runner/index.js"
 import { Command } from "../command.js"
 import { indent } from "../utils/indent.js"
