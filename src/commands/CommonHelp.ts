@@ -1,8 +1,8 @@
 import ty from "@xieyuheng/ty"
-import { CommandRunner } from "../command-runner/index.js"
-import { Command } from "../command.js"
-import { indent } from "../utils/indent.js"
-import { rightPad } from "../utils/rightPad.js"
+import { CommandRunner } from "../command-runner/index.ts"
+import { Command } from "../command.ts"
+import { indent } from "../utils/indent.ts"
+import { rightPad } from "../utils/rightPad.ts"
 
 type Args = { name?: string }
 

@@ -1,4 +1,4 @@
-export * from "./command-runner/index.js"
-export * as CommandRunners from "./command-runners/index.js"
-export * from "./command.js"
-export * as Commands from "./commands/index.js"
+export * from "./command-runner/index.ts"
+export * as CommandRunners from "./command-runners/index.ts"
+export * from "./command.ts"
+export * as Commands from "./commands/index.ts"

@@ -1,4 +1,4 @@
-import { Command } from "../command.js"
+import { Command } from "../command.ts"
 
 export abstract class CommandRunner {
   abstract name: string

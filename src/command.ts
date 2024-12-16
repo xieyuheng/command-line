@@ -1,7 +1,7 @@
 import { Schema } from "@xieyuheng/ty"
 import fs from "fs"
-import { CommandRunner } from "./command-runner/index.js"
-import { colors } from "./utils/colors.js"
+import { CommandRunner } from "./command-runner/index.ts"
+import { colors } from "./utils/colors.ts"
 
 type SchemaObject<T> = { [P in keyof T]: Schema<T[P]> }
 

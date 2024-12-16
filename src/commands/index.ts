@@ -1,1 +1,1 @@
-export * from "./CommonHelp.js"
+export * from "./CommonHelp.ts"

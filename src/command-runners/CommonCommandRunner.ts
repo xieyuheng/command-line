@@ -1,8 +1,8 @@
 import { Schema, isReport } from "@xieyuheng/ty"
 import Path from "path"
 import yargsParser from "yargs-parser"
-import { CommandRunner } from "../command-runner/index.js"
-import { Command } from "../command.js"
+import { CommandRunner } from "../command-runner/index.ts"
+import { Command } from "../command.ts"
 
 export class CommonCommandRunner extends CommandRunner {
   commands: Array<Command<any, any>>

@@ -1,1 +1,1 @@
-export * from "./CommonCommandRunner.js"
+export * from "./CommonCommandRunner.ts"
